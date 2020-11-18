@@ -14,16 +14,16 @@ console.log(cognome);
 /* CREO UNA ARRAY E INSERISCO I COGNOMI */
 
 var surnames = ["Gianguzzi", "Bianchi", "Rossi", "Duzioni", "Balsano", "Verdi"];
-document.getElementById("demo").innerHTML = surnames;
+surnames.push(cognome);
 
-/* STAMPO LA LISTA ORDINATA DEI COGNOMI IN ORDINE ALFABETICO */
-function myFunction() {
-    surnames.sort();
-    document.getElementById("demo").innerHTML = surnames;
-   
+/* STAMPO LA LISTA DEI COGNOMI IN ORDINE ALFABETICO */
+var surnameSorted = surnames.sort();
 
+for(var i = 0; i < surnameSorted.length; i++) {
+    var item = surnameSorted[i];
+    var lista = document.getElementById("lista-cognomi").innerHTML;
+    document.getElementById("lista-cognomi").innerHTML = lista + "<li>" + item + "</li>";
 }
 
-/* ADESSO SCRIVO LA POSIZIONE IN IN CUI L'UTENTE SI TROVA */
-document.getElementById("posizione").innerHTML = (surnames.indexOf(cognome) + 1);
-
+/* ADESSO SCRIVO LA POSIZIONE DEL COGNOME */
+document.getElementById("position").innerHTML = "La posizione del tuo cognome è..." + (surnameSorted.indexOf(cognome) + 1 );
