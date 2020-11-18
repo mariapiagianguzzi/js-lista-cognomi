@@ -13,7 +13,7 @@ console.log(cognome);
 
 /* CREO UNA ARRAY E INSERISCO I COGNOMI */
 
-var surnames = ["Gianguzzi", "Bianchi", "Rossi", "Duzioni", "Balsano", "Verdi"];
+var surnames = ["Bianchi", "Rossi", "Duzioni", "Balsano", "Verdi"];
 surnames.push(cognome);
 
 /* STAMPO LA LISTA DEI COGNOMI IN ORDINE ALFABETICO */
